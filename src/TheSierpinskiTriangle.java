@@ -1,3 +1,8 @@
+/*
+Name: Alex Yuk
+Problem: Sierpinski Triangle
+ */
+
 import edu.princeton.cs.algs4.*;
 
 public class TheSierpinskiTriangle {
@@ -7,9 +12,9 @@ public class TheSierpinskiTriangle {
         drawSierpinskiTriangle(0.1, 0.1, 0.8, 5);
     }
 
-    // PRINT OUT COORDINATES
     public static void drawSierpinskiTriangle(double x, double y, double side_length, int order) {
         if (order <= 0) {
+            // Printing out the coordinates of the triangle drawn
             System.out.println((x + side_length / 2) + ", " + (side_length / 2  * Math.sqrt(3) + y));
             StdDraw.line(x, y, x + side_length, y);
             StdDraw.line(x, y, x + side_length / 2, side_length / 2 * Math.sqrt(3) + y);

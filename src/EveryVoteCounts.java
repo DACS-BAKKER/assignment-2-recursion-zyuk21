@@ -1,12 +1,15 @@
-import java.util.stream.IntStream;
+/*
+Name: Alex Yuk
+Problem: Every Vote Counts
+ */
 
 public class EveryVoteCounts {
-    private static final int[] BLOCK = new int[]{4, 2, 4};
+    private static final int[] BLOCK = new int[]{2, 4, 4};
     private static final int NUM = 7;
     private static int criticalPoint;
 
     public static void main(String[] args) {
-        criticalPoint = sumArray(BLOCK);
+        criticalPoint = (sumArray(BLOCK) + NUM) / 2;
         System.out.println("Critical situations: " + countCriticalVotes(BLOCK, NUM));
     }
 
@@ -25,6 +28,7 @@ public class EveryVoteCounts {
             count++;
         return count;
     }
+
 
     private static int sumArray(int[] arr) {
         int total = 0;

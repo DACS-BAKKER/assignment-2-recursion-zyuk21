@@ -1,3 +1,8 @@
+/*
+Name: Alex Yuk
+Problem: Summing Digits
+ */
+
 import edu.princeton.cs.algs4.*;
 
 public class SummingDigits {

@@ -1,6 +1,7 @@
-import edu.princeton.cs.algs4.StdIn;
-
-import java.util.ArrayList;
+/*
+Name: Alex Yuk
+Problem: Human Pyramids
+ */
 
 public class HumanPyramids {
     private static int counter = 0;
@@ -10,7 +11,7 @@ public class HumanPyramids {
         int col = 9;
         long before, after;
 
-        // Solve with recursion
+        // Solve normally
         before = System.currentTimeMillis();
 
         System.out.println(wob(row, col));
@@ -21,6 +22,7 @@ public class HumanPyramids {
 
         counter = 0;
 
+        // Solve with memoization
         before = System.currentTimeMillis();
 
         System.out.println(wobWrapper(row, col));
@@ -31,11 +33,13 @@ public class HumanPyramids {
 
     }
 
+    // Wrapper Function
     public static double wobWrapper(int row, int col) {
         double tracker[][] = new double[row + 1][col + 1];
         return wobMemoization(row, col, tracker);
     }
 
+    // Solving with memoization
     public static double wobMemoization(int row, int col, double tracker[][]) {
         counter++;
         if (row <= 0)
@@ -49,6 +53,7 @@ public class HumanPyramids {
         return tracker[row][col];
     }
 
+    // Solving normally
     public static double wob(int row, int col) {
         counter++;
         if (row <= 0)
